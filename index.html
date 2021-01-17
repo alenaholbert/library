@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Library</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="header">
+        <h1>Library</h1>
+        <h5>Store books locally or online (using Firebase). Click '+' to add your books!</h5>
+    </div>
+
+    <button id="new-book">+</button>
+
+    <ol id="bookshelf"></ol>
+
+    <!-- New Book Form: -->
+    <section id="popup">
+        <div id="form-container">
+            <h1>Add a New Book</h1>
+            <form id="form">
+                <label for="title">*Title:</label>
+                <input type="text" id="title" name="title" placeholder="Matilda" autocomplete="off" required>
+
+                <label for="author">*Author:</label>
+                <input type="text" id="author" name="author" placeholder="Roald Dahl" autocomplete="off" required>
+
+                <label for="pages">Number of Pages:</label>
+                <input type="number" id="pages" name="pages" placeholder="200" autocomplete="off">
+
+                <label for="read">Have You Read This Book?</label>
+                <select name="read" id="read">
+                    <option value="yes">Yes!</option>
+                    <option value="no">Not Yet :(</option>
+                </select>
+
+                <button type="submit" id="submit">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
