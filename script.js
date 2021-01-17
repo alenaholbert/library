@@ -3,7 +3,6 @@ const popup = document.querySelector("#form-container");
 const form = document.querySelector("#form");
 const bookshelf = document.querySelector("#bookshelf");
 const newBookButton = document.querySelector("#new-book");
-const submitButton = document.querySelector("#submit");
 index = 0;
 
 // Book Object
@@ -139,27 +138,9 @@ function deleteBook() {
     removeIndex = book.dataset.index;
     bookshelf.removeChild(book);
     myLibrary.splice(book, 1);
-    //index--;
-    //myLibrary.forEach(b => b.dataset.index = b.dataset.index-1);
     displayAllBooks();
 }
-
-function displayAllBooks() {
-    myLibrary.forEach(function(book) {
-        console.log(`${book.title} written by ${book.author} has ${book.pages} pages. Has it been read? ${book.read}`);
-    });
-}
-
-// let book1summary = "Matilda is a bright little girl who is very eager to learn. Eventually, her insensitive parents send her to a school run by Miss (The) Trunchbull. She is a cruel authoritarian that loathes children. Matilda befriends her school teacher, Miss Honey.";
-// let book1 = new Book("Matilda", "Roald Dahl", 150, true, book1summary);
-// let book2summary = "A man loses his identity while living under a repressive regime. In a story based on George Orwell's classic novel, Winston Smith (John Hurt) is a government employee whose job involves the rewriting of history in a manner that casts his fictional country's leaders in a charitable light. His trysts with Julia (Suzanna Hamilton) provide his only measure of enjoyment, but lawmakers frown on the relationship -- and in this closely monitored society, there is no escape from Big Brother.";
-// let book2 = new Book("1984", "George Orwell", 300, true, book2summary);
-
-// myLibrary.push(book1);
-// myLibrary.push(book2);
-// displayAllBooks();
 
 closeForm();
 newBookButton.addEventListener('mouseup', toggleForm);
 form.addEventListener("submit", e => addBook(e));
-//submitButton.addEventListener("click", addBook);
